@@ -26,6 +26,10 @@ kubectl-plugin: build
 ## Runs a set of required checks
 check: check-copyright
 
+.PHONY: dco
+dco:
+	@build/dco.sh
+
 .PHONY: check-copyright
 check-copyright:
 	@build/check-copyright.sh
